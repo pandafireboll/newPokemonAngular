@@ -30,7 +30,8 @@
 		</div>
 		<div class='inline'>
 			<!--Inputs for gathering search criteria-->
-			<strong>Order by: </strong> <input ng-model='sorting'>
+
+			<strong>Order by: </strong> <input ng-init='sorting="number"' ng-model='sorting'>
 			<div class='search-field'>
 
 				<div class='inline'> <div>Number:</div> <input ng-model='search.number'></div>
