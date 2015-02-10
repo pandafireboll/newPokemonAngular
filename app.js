@@ -7,7 +7,7 @@ var app = angular.module('myApp', ['firebase']);
 app.controller('MainController', ['$scope', '$firebase', function($scope, $firebase){
 	
 	//Linking my app to the firebase account here
-	var ref = new Firebase('https://sylvesterpoke.firebaseio.com/')
+	var ref = new Firebase('https://sylvesterpoke.firebaseio.com/');
 	var sync = $firebase(ref);
 
 	//The firebase is synced to my locally created pokemonList
