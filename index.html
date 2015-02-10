@@ -30,7 +30,7 @@
 		</div>
 		<div class='inline'>
 			<!--Inputs for gathering search criteria-->
-			<strong>Search by</strong>
+			<strong>Order by: </strong> <input ng-model='sorting'>
 			<div class='search-field'>
 
 				<div class='inline'> <div>Number:</div> <input ng-model='search.number'></div>
@@ -42,7 +42,7 @@
 			</div>
 		</div><br>
 		<!--Ng Repeat goes through every element in my array (pokemonList, which is synced with firebase) and displays the relevant info-->
-		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search | orderBy:"number"'>
+		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search | orderBy:sorting'>
 			<div class='poke-contain inline'>
 				
 				<img class='poke-image' src='{{poke.image}}'><br>
