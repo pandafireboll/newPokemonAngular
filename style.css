@@ -1,10 +1,14 @@
+body{
+	padding: 5px;
+
+}
 .pokemonDisplay{
 	display: inline-block;
 	margin: 10px;
 	padding: 30px;
 	border: 1px black solid;
 	border-radius: 5%;
-	background-color: #DDD;
+	background-color: #F0F0FD;
 	min-width: 200px;
 
 }
@@ -27,7 +31,7 @@
 .search-field{
 	padding: 5px;
 	background-color: #FDE0E0;
-	
+
 }
 
 div.inline div{
