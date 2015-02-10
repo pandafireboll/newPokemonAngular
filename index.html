@@ -8,23 +8,26 @@
 	<div ng-controller='MainController'>
 		<div class='add-field'>	
 			<div class='inline'>
-				Image: <input name='image' ng-model='pokemon.image'><br>
-				Name: <input type='text' name='name' ng-model='pokemon.name' required><br>
-				Type: <input type='text' name='type' ng-model='pokemon.type'><br>
+				<div>Image:</div> <input name='image' ng-model='pokemon.image'><br>
+				<div>Name:</div> <input type='text' name='name' ng-model='pokemon.name' required><br>
+				<div>Type:</div> <input type='text' name='type' ng-model='pokemon.type'><br>
 			</div>
 			<div class='inline'>
-				Categories: <input type='text' name='categories' ng-model='pokemon.categories'><br>
-				Abilities: <input type='text' name='abilities' ng-model='pokemon.abilities'><br>
-				Weaknesses <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br>
+				<div>Categories:</div> <input type='text' name='categories' ng-model='pokemon.categories'><br>
+				<div>Abilities:</div> <input type='text' name='abilities' ng-model='pokemon.abilities'><br>
+				<div>Weaknesses:</div> <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br>
 			</div>
 			<button ng-click='addPoke()'>Add Pokemon</button>
 		</div>
 		<hr>
-			<div class='inline'><strong>Search by</strong> Name: <input ng-model='search.name'></div>
-			<div class='inline'>Type: <input ng-model='search.type'></div>
-			<div class='inline'>Category: <input ng-model='search.categories'></div>
-			<div class='inline'>Ability: <input ng-model='search.abilities'></div>
-			<div class='inline'>Weakness: <input ng-model='search.weaknesses'></div>
+			<strong>Search by</strong>
+			<div class='search-field'>
+				<div class='inline'> <div>Name:</div> <input ng-model='search.name'></div>
+				<div class='inline'><div>Type:</div> <input ng-model='search.type'></div>
+				<div class='inline'><div>Category:</div> <input ng-model='search.categories'></div>
+				<div class='inline'><div>Ability:</div> <input ng-model='search.abilities'></div>
+				<div class='inline'><div>Weakness:</div> <input ng-model='search.weaknesses'></div>
+			</div>
 		<br>
 
 		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search'>
