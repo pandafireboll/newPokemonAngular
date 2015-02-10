@@ -22,6 +22,7 @@ body{
 /*************  STYLING SECTION FOR SEARCHING POKEMON  *******************/
 .search-field{
 	padding: 5px;
+	width: 500px;
 	background-color: #FDE0E0;
 
 }
