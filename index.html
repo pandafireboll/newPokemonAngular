@@ -1,0 +1,53 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div ng-controller='MainController'>
+		<div class='inline'>
+			Image: <input name='image' ng-model='pokemon.image'><br>
+			Name: <input type='text' name='name' ng-model='pokemon.name' required><br>
+			Type: <input type='text' name='type' ng-model='pokemon.type'><br>
+		</div>
+		<div class='inline'>
+			Categories: <input type='text' name='categories' ng-model='pokemon.categories'><br>
+			Abilities: <input type='text' name='abilities' ng-model='pokemon.abilities'><br>
+			Weaknesses <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br>
+		</div>
+		<button ng-click='addPoke()'>Add Pokemon</button>
+
+		<hr>
+		Search by name: <input ng-model='search.name'>
+		<br>
+		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search'>
+			<div class='inline'>
+				<img class='poke-image' src='{{poke.image}}'><br>
+				<strong> {{poke.name}} </strong><br>
+				Type: {{poke.type}}<br>
+				Abilities: {{poke.abilities}}<br>
+				Categories: {{poke.categories}}<br>
+				Weaknesses: {{poke.weaknesses}}<br>
+				<button ng-click='deletePoke(poke)'>Release</button>
+				<button ng-hide='editting' ng-click='editting=!editting'>Edit</button><br><br>
+			</div>
+			<div ng-show='editting' class='inline'>
+				Image: <input name='image' ng-model='poke.image'><br>
+				Name: <input type='text' name='name' ng-model='poke.name' required><br>
+				Type: <input type='text' name='type' ng-model='poke.type'><br>
+				Categories: <input type='text' name='categories' ng-model='poke.categories'><br>
+				Abilities: <input type='text' name='abilities' ng-model='poke.abilities'><br>
+				Weaknesses <input type='text' name='weaknesses' ng-model='poke.weaknesses'><br>
+				<button ng-click='pokemonList.$save(poke); editting=!editting' >Update</button><br><br>
+			</div>
+		
+		</div>
+	</div>
+</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+	<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+	<script type="text/javascript" src='app.js'></script>
+</html>
