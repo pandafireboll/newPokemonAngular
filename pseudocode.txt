@@ -1,0 +1,27 @@
+1. Set up links and script links
+	- angular
+	- style.css
+	- app.js
+
+2. Set up angular infrastructure
+	- ng-app
+	- ng-controller
+
+3. Connect to firebase
+	- make firebase available to my controller
+	- create a local array which syncs to my firebase database
+
+4. Create an add form
+	- attributes
+	- add the new object to my firebase
+
+5. Display data
+	- go through all of my local array
+	- display all attributes of each object during each iteration
+
+6. 'Add'/'Remove' functions 
+	- actually remove object from my firebase
+
+
+7. Set up filter
+	- Create inputs which accept text that will be used to filter

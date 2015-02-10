@@ -1,7 +1,42 @@
+/*************  GENERAL DOCUMENT LAYOUT AND MULTIPURPOSE STYLING *******************/
+
 body{
 	padding: 5px;
 
 }
+
+.inline{
+	display: inline-block;
+	padding-right: 20px;
+}
+
+
+/*************  STYLING SECTION FOR ADDING POKEMON  *******************/
+.add-field{
+	padding: 12px;
+	background-color: #F0F0FD;
+	display: inline-block;
+}
+
+
+/*************  STYLING SECTION FOR SEARCHING POKEMON  *******************/
+.search-field{
+	padding: 5px;
+	background-color: #FDE0E0;
+
+}
+
+
+div.inline div{
+	padding-top: 5px;
+}
+
+/*************  STYLING POKEMON CARD DISPLAY  *******************/
+.poke-image{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
 .pokemonDisplay{
 	display: inline-block;
 	margin: 10px;
@@ -12,28 +47,8 @@ body{
 	min-width: 200px;
 
 }
-.add-field{
-	padding: 12px;
-	background-color: #F0F0FD;
-	display: inline-block;
-}
 
-.poke-image{
-	height: 100px;
-	margin-bottom: 20px;
-}
 
-.inline{
-	display: inline-block;
-	padding-right: 20px;
-}
 
-.search-field{
-	padding: 5px;
-	background-color: #FDE0E0;
 
-}
 
-div.inline div{
-	padding-top: 5px;
-}
