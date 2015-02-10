@@ -19,8 +19,13 @@
 		<button ng-click='addPoke()'>Add Pokemon</button>
 
 		<hr>
-		Search by name: <input ng-model='search.name'>
+			<div class='inline'><strong>Search by</strong> Name: <input ng-model='search.name'></div>
+			<div class='inline'>Type: <input ng-model='search.type'></div>
+			<div class='inline'>Category: <input ng-model='search.categories'></div>
+			<div class='inline'>Ability: <input ng-model='search.abilities'></div>
+			<div class='inline'>Weakness: <input ng-model='search.weaknesses'></div>
 		<br>
+
 		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search'>
 			<div class='inline'>
 				<img class='poke-image' src='{{poke.image}}'><br>
