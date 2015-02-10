@@ -43,10 +43,10 @@
 			<div class='poke-contain inline'>
 				<img class='poke-image' src='{{poke.image}}'><br>
 				<strong> {{poke.name}} </strong><br>
-				Type: {{poke.type}}<br>
-				Abilities: {{poke.abilities}}<br>
-				Categories: {{poke.categories}}<br>
-				Weaknesses: {{poke.weaknesses}}<br>
+				Type: <em>{{poke.type}}</em><br>
+				Abilities: <em>{{poke.abilities}}</em><br>
+				Categories:  <em>{{poke.categories}}</em><br>
+				Weaknesses:  <em>{{poke.weaknesses}}</em><br>
 				<button ng-click='deletePoke(poke)'>Release</button>
 				<!--ng-hide makes the button visible unless the variable 'editting' is true-->
 				<button ng-hide='editting' ng-click='editting=!editting'>Edit</button><br><br>
