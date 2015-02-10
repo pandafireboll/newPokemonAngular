@@ -13,6 +13,7 @@
 			<strong>Add Pokemon</strong><br>
 			<div class='add-field'>	
 				<div class='inline'>
+					<div>Number:</div> <input name='image' ng-model='pokemon.number'><br>
 					<div>Image:</div> <input name='image' ng-model='pokemon.image'><br>
 					<div>Name:</div> <input type='text' name='name' ng-model='pokemon.name' required><br>
 					<div>Type:</div> <input type='text' name='type' ng-model='pokemon.type'><br>
@@ -20,17 +21,19 @@
 				<div class='inline'>
 					<div>Categories:</div> <input type='text' name='categories' ng-model='pokemon.categories'><br>
 					<div>Abilities:</div> <input type='text' name='abilities' ng-model='pokemon.abilities'><br>
-					<div>Weaknesses:</div> <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br>
-				</div>
+					<div>Weaknesses:</div> <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br><br>
 
-				<!--Press this button to add this pokemon-->
-				<button ng-click='addPoke()'>Add Pokemon</button>
+					<!--Press this button to add this pokemon-->
+					<button ng-click='addPoke()'>Add Pokemon</button>
+				</div>
 			</div>
 		</div>
 		<div class='inline'>
 			<!--Inputs for gathering search criteria-->
 			<strong>Search by</strong>
 			<div class='search-field'>
+
+				<div class='inline'> <div>Number:</div> <input ng-model='search.number'></div>
 				<div class='inline'> <div>Name:</div> <input ng-model='search.name'></div>
 				<div class='inline'><div>Type:</div> <input ng-model='search.type'></div>
 				<div class='inline'><div>Category:</div> <input ng-model='search.categories'></div>
@@ -41,6 +44,7 @@
 		<!--Ng Repeat goes through every element in my array (pokemonList, which is synced with firebase) and displays the relevant info-->
 		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search'>
 			<div class='poke-contain inline'>
+				<strong>{{poke.number}}</strong>
 				<img class='poke-image' src='{{poke.image}}'><br>
 				<strong> {{poke.name}} </strong><br>
 				Type: <em>{{poke.type}}</em><br>
@@ -55,6 +59,7 @@
 			<!--Creates a field where I can edit existing pokemon-->
 			<!--ng-show makes the div invisible unless the variable 'editting' is true-->
 			<div ng-show='editting' class='inline'>
+				Number: <input name='number' ng-model='poke.number'><br>
 				Image: <input name='image' ng-model='poke.image'><br>
 				Name: <input type='text' name='name' ng-model='poke.name' required><br>
 				Type: <input type='text' name='type' ng-model='poke.type'><br>
