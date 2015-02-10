@@ -42,7 +42,7 @@
 			</div>
 		</div><br>
 		<!--Ng Repeat goes through every element in my array (pokemonList, which is synced with firebase) and displays the relevant info-->
-		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search'>
+		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search | orderBy:"number"'>
 			<div class='poke-contain inline'>
 				<strong>{{poke.number}}</strong>
 				<img class='poke-image' src='{{poke.image}}'><br>
@@ -66,7 +66,7 @@
 				Categories: <input type='text' name='categories' ng-model='poke.categories'><br>
 				Abilities: <input type='text' name='abilities' ng-model='poke.abilities'><br>
 				Weaknesses <input type='text' name='weaknesses' ng-model='poke.weaknesses'><br>
-				<button ng-click='updatePoke(poke); editting=!editting' >Update</button><br><br>
+				<button ng-click='updatePoke(poke); editting=!editting'>Update</button><br><br>
 			</div>
 		</div>
 	</div>
