@@ -44,7 +44,7 @@
 		<!--Ng Repeat goes through every element in my array (pokemonList, which is synced with firebase) and displays the relevant info-->
 		<div class='pokemonDisplay' ng-repeat='poke in pokemonList | filter:search | orderBy:"number"'>
 			<div class='poke-contain inline'>
-				<strong>{{poke.number}}</strong>
+				#{{poke.number}}
 				<img class='poke-image' src='{{poke.image}}'><br>
 				<strong> {{poke.name}} </strong><br>
 				Type: <em>{{poke.type}}</em><br>
