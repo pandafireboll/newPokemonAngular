@@ -8,6 +8,11 @@
 	min-width: 200px;
 
 }
+.add-field{
+	padding: 12px;
+	background-color: #F0F0F8;
+	display: inline-block;
+}
 
 .poke-image{
 	height: 100px;

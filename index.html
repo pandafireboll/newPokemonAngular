@@ -6,18 +6,19 @@
 </head>
 <body>
 	<div ng-controller='MainController'>
-		<div class='inline'>
-			Image: <input name='image' ng-model='pokemon.image'><br>
-			Name: <input type='text' name='name' ng-model='pokemon.name' required><br>
-			Type: <input type='text' name='type' ng-model='pokemon.type'><br>
+		<div class='add-field'>	
+			<div class='inline'>
+				Image: <input name='image' ng-model='pokemon.image'><br>
+				Name: <input type='text' name='name' ng-model='pokemon.name' required><br>
+				Type: <input type='text' name='type' ng-model='pokemon.type'><br>
+			</div>
+			<div class='inline'>
+				Categories: <input type='text' name='categories' ng-model='pokemon.categories'><br>
+				Abilities: <input type='text' name='abilities' ng-model='pokemon.abilities'><br>
+				Weaknesses <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br>
+			</div>
+			<button ng-click='addPoke()'>Add Pokemon</button>
 		</div>
-		<div class='inline'>
-			Categories: <input type='text' name='categories' ng-model='pokemon.categories'><br>
-			Abilities: <input type='text' name='abilities' ng-model='pokemon.abilities'><br>
-			Weaknesses <input type='text' name='weaknesses' ng-model='pokemon.weaknesses'><br>
-		</div>
-		<button ng-click='addPoke()'>Add Pokemon</button>
-
 		<hr>
 			<div class='inline'><strong>Search by</strong> Name: <input ng-model='search.name'></div>
 			<div class='inline'>Type: <input ng-model='search.type'></div>
