@@ -1,4 +1,3 @@
-var attr=['name', 'type', 'categories', 'abilities', 'weaknesses']
 
 //Creating angular app
 var app = angular.module('myApp', ['firebase']);
